@@ -10,8 +10,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 class ReservationSerializer(serializers.ModelSerializer):
   user= serializers.SlugRelatedField(
-     ## many = True,
-     ##read_only = False,
+    
     slug_field='name',
     queryset= User.objects.all()
 
@@ -27,8 +26,7 @@ class RoomSerializer(serializers.ModelSerializer):
 
 class ItemSerializer(serializers.ModelSerializer):
   room= serializers.SlugRelatedField(
-    ## many = True,
-    ##read_only = False,
+   
     slug_field='name',
     queryset=Room.objects.all()
 
