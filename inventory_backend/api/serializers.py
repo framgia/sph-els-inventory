@@ -11,7 +11,7 @@ class UserSerializer(serializers.ModelSerializer):
 class ReservationSerializer(serializers.ModelSerializer):
   class Meta:
     model = Reservation
-    fields = ('user', 'reserved_date_from', 'reserved_date_to')
+    fields = ('user', 'reserved_date_from', 'reserved_date_to') # '__all__'
 
 class RoomSerializer(serializers.ModelSerializer):
   class Meta:
