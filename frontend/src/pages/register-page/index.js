@@ -1,11 +1,12 @@
+import "../../global.css";
 import "./index.css";
 import React from "react";
-import NavBar from '../../components/navbar/index'
+import NavBar from "../../components/navbar/index";
 
 const RegisterPage = () => {
   return (
     <div>
-      <NavBar/>
+      <NavBar />
       <div className="container">
         <div className="boxContainer">
           <div>
@@ -13,12 +14,12 @@ const RegisterPage = () => {
             <form className="ui form">
               <div className="field">
                 <label>Name</label>
-                <input type="text"/>
+                <input type="text" />
               </div>
             </form>
-            <br/>
+            <br />
             <div>
-              <button className="button">Add User</button>
+              <button className="addButton">Add User</button>
             </div>
           </div>
         </div>

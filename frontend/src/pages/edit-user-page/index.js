@@ -1,24 +1,24 @@
-import "../../index.css";
+import "../../global.css";
 import "./index.css";
 import React from "react";
-import NavBar from '../../components/navbar/index'
+import NavBar from "../../components/navbar/index";
 
 const EditUserPage = () => {
   return (
     <div>
-      <NavBar/>
+      <NavBar />
       <div className="holder">
         <div>
           <h2>Edit User Name</h2>
           <form className="ui form">
             <div className="field">
               <label>New User Name</label>
-              <input type="text"/>
+              <input type="text" />
             </div>
           </form>
-          <br/>
+          <br />
           <div>
-            <button className="button">Submit</button>
+            <button className="addButton">Submit</button>
           </div>
         </div>
       </div>
