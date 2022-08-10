@@ -1,0 +1,10 @@
+.holder {
+  background-color: white;
+  width: 200px;
+  margin-top: 50px;
+  margin-left: 375px;
+  height: 50vh;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
