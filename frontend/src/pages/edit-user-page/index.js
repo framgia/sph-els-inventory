@@ -1,3 +1,4 @@
+import "../../index.css";
 import "./index.css";
 import React from "react";
 import NavBar from '../../components/navbar/index'
@@ -6,7 +7,7 @@ const EditUserPage = () => {
   return (
     <div>
       <NavBar/>
-      <div className="boxContainer">
+      <div className="holder">
         <div>
           <h2>Edit User Name</h2>
           <form className="ui form">
