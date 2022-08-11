@@ -1,0 +1,12 @@
+.formInput {
+  width: 100%;
+  padding: 0px;
+  margin: 10px 0px;
+  align-items: center;
+  justify-content: center;
+}
+
+.width-lg {
+  width: 100%;
+  padding: 20px;
+}
