@@ -2,6 +2,7 @@ import "../../global.css";
 import "./index.css";
 import React from "react";
 import NavBar from "../../components/navbar/index";
+import AddUserModal from "../../modals/add-user";
 
 const RegisterPage = () => {
   return (
@@ -19,7 +20,7 @@ const RegisterPage = () => {
             </form>
             <br />
             <div>
-              <button className="addButton">Add User</button>
+              <AddUserModal />
             </div>
           </div>
         </div>
