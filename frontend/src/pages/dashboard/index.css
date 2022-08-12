@@ -211,3 +211,7 @@ body {
   margin: 0 5px;
   font: 1.5rem "Roboto", sans-serif;
 }
+
+.style-icon {
+  margin-right: 10px;
+}
