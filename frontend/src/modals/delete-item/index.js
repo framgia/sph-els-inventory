@@ -2,7 +2,7 @@ import React from "react";
 import { Modal } from "semantic-ui-react";
 import { MdDelete } from "react-icons/md";
 
-function DeleteItemConfirmationModal() {
+function DeleteConfirmation() {
   return (
     <Modal
       trigger={<MdDelete />}
@@ -13,4 +13,4 @@ function DeleteItemConfirmationModal() {
   );
 }
 
-export default DeleteItemConfirmationModal;
+export default DeleteConfirmation;
