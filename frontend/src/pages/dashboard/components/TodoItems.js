@@ -1,6 +1,7 @@
 import React from "react";
-import { MdDelete, MdEdit } from "react-icons/md";
+import { MdEdit } from "react-icons/md";
 import "../index.css";
+import DeleteConfirmation from "../../../modals/delete-item";
 
 function TodoItems() {
   return (
@@ -18,7 +19,7 @@ function TodoItems() {
             <MdEdit />
           </div>
           <div className="icon">
-            <MdDelete />
+            <DeleteConfirmation />
           </div>
         </div>
       </div>
@@ -35,7 +36,7 @@ function TodoItems() {
             <MdEdit />
           </div>
           <div className="icon">
-            <MdDelete />
+            <DeleteConfirmation />
           </div>
         </div>
       </div>
