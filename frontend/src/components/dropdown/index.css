@@ -1,0 +1,12 @@
+.dropdown {
+  width: 100%;
+  padding: 0px;
+  margin: 10px 0px;
+  align-items: center;
+  justify-content: center;
+}
+
+#users {
+  padding: 20px;
+  width: 100%;
+}

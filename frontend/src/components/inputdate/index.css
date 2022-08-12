@@ -1,0 +1,13 @@
+.date-app {
+  width: 100%;
+}
+
+.width-lg-input-from-date {
+  width: 95%;
+  padding: 20px;
+}
+
+.width-lg-input-to-date {
+  width: 100%;
+  padding: 20px;
+}

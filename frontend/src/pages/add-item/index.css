@@ -1,0 +1,25 @@
+.addItemPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formInput {
+  display: inline;
+  margin-right: auto;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inline-form {
+  display: inline-flex;
+  width: 100%;
+}
+
+.pos-btn {
+  margin-top: 10px;
+}
