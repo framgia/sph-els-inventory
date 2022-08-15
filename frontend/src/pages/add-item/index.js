@@ -4,6 +4,7 @@ import Button from "../../components/button";
 import InputDate from "../../components/inputdate";
 import DropDown from "../../components/dropdown/index.js";
 import "./index.css";
+import NavBar from "../../components/NavBar";
 
 const usersOptions = [
   {
@@ -36,6 +37,7 @@ const AddItemPage = () => {
 
   return (
     <div>
+      <NavBar />
       <h1>Add Item</h1>
       <div className="addItemPage">
         <form onSubmit={handleSubmit}>

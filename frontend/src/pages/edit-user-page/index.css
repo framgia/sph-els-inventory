@@ -1,10 +1,7 @@
 .holder {
   background-color: white;
-  width: 200px;
-  margin-top: 50px;
-  margin-left: 375px;
-  height: 50vh;
+  width: 100%;
   display: flex;
-  align-items: left;
-  justify-content: left;
+  align-items: center;
+  justify-content: center;
 }
