@@ -1,9 +1,8 @@
 import React from "react";
 import WelcomePage from "./pages/welcome";
-import EditItemPage from "./pages/edit-item";
 
 const App = () => {
-  return <EditItemPage />;
+  return <WelcomePage />;
 };
 
 export default App;

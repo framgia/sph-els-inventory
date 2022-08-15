@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import FormInput from "../../components/input-text-field";
+import FormInput from "../../components/InputField";
 import Button from "../../components/Button";
 import InputDate from "../../components/InputDate";
-import DropDown from "../../components/dropdown";
-import "./index.css";
+import DropDown from "../../components/DropDownMenu";
 import NavBar from "../../components/NavBar";
+import "./index.css";
 
 const usersOptions = [
   {
@@ -24,6 +24,10 @@ const EditItemPage = () => {
   const [fromDateInput, setFromDateInput] = useState("");
   const [toDateInput, setToDateInput] = useState("");
 
+  /*useEffect(() => {
+    axios.get().then();
+  }, []);*/
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(`
@@ -39,19 +43,19 @@ const EditItemPage = () => {
     <div>
       <NavBar />
       <h1>Edit Item</h1>
-      <div className="addItemPage">
+      <div className="editItemPage">
         <form onSubmit={handleSubmit}>
           <FormInput
             styleName="width-lg"
             onChange={(e) => setItemName(e.target.value)}
-            placeholder="Item Name"
+            placeholder="New Item Name"
             text="Item Name"
           />
 
           <FormInput
             styleName="width-lg"
             onChange={(e) => setRoom(e.target.value)}
-            placeholder="Room"
+            placeholder="New Room"
             text="Room"
           />
 
