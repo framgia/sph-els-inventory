@@ -1,7 +1,8 @@
 import "../../global.css";
 import "./index.css";
 import React from "react";
-import NavBar from "../../components/navbar/index";
+import NavBar from "../../components/NavBar";
+import EditUserModal from "../../modals/edit-user";
 
 const EditUserPage = () => {
   return (
@@ -18,7 +19,7 @@ const EditUserPage = () => {
           </form>
           <br />
           <div>
-            <button className="addButton">Submit</button>
+            <EditUserModal />
           </div>
         </div>
       </div>
