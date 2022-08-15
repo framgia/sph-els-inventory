@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import FormInput from "../../components/InputText";
+import FormInput from "../../components/input-text-field";
 import Button from "../../components/Button";
 import InputDate from "../../components/InputDate";
-import DropDown from "../../components/DropdownMenu";
+import DropDown from "../../components/dropdown";
 import "./index.css";
 import NavBar from "../../components/NavBar";
 
@@ -17,7 +17,7 @@ const usersOptions = [
   },
 ];
 
-const AddItemPage = () => {
+const EditItemPage = () => {
   const [itemName, setItemName] = useState("");
   const [room, setRoom] = useState("");
   const [reserve, setReserve] = useState("");
@@ -38,7 +38,7 @@ const AddItemPage = () => {
   return (
     <div>
       <NavBar />
-      <h1>Add Item</h1>
+      <h1>Edit Item</h1>
       <div className="addItemPage">
         <form onSubmit={handleSubmit}>
           <FormInput
@@ -86,4 +86,4 @@ const AddItemPage = () => {
   );
 };
 
-export default AddItemPage;
+export default EditItemPage;
