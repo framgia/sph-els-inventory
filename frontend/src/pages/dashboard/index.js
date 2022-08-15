@@ -1,9 +1,12 @@
 import React from "react";
 import "./index.css";
 import TodoItems from "./components/TodoItems";
-import NavBar from "../../components/NavBar";
+import NavBar from "../../components/navbar/index";
+import { useNavigate } from "react-router-dom";
 
 const DashboardPage = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <NavBar />
@@ -11,7 +14,12 @@ const DashboardPage = () => {
         <h1 className="page-title">Inventory List</h1>
         <div className="addItem-container">
           <div className="app-header">
-            <button className="button-primary">Add Item</button>
+            <button
+              className="button-primary"
+              onClick={() => navigate("/add-item")}
+            >
+              Add Item
+            </button>
           </div>
         </div>
         <div>
