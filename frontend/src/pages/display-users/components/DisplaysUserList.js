@@ -1,4 +1,5 @@
 import React from "react";
+import DeleteUserConfirmation from "../../../modals/delete-user";
 import { MdDelete, MdEdit } from "react-icons/md";
 import { ImUser } from "react-icons/im";
 import "../../dashboard/index.css";
@@ -20,7 +21,7 @@ function DisplayUserList() {
             <MdEdit />
           </div>
           <div className="icon">
-            <MdDelete />
+            <DeleteUserConfirmation />
           </div>
         </div>
       </div>
@@ -38,7 +39,7 @@ function DisplayUserList() {
             <MdEdit />
           </div>
           <div className="icon">
-            <MdDelete />
+            <DeleteUserConfirmation />
           </div>
         </div>
       </div>
