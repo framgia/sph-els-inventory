@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import FormInput from "../../components/input-text-field";
+import FormInput from "../../components/InputText";
 import Button from "../../components/button";
 import InputDate from "../../components/inputdate";
-import DropDown from "../../components/dropdown/index.js";
-import NavBar from "../../components/navbar/index";
+import DropDown from "../../components/DropDownMenu/index";
+import NavBar from "../../components/navbar";
 import "./index.css";
-import NavBar from "../../components/NavBar";
 
 const usersOptions = [
   {

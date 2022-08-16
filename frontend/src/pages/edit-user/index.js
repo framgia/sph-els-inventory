@@ -1,7 +1,7 @@
 import "../../global.css";
 import "./index.css";
 import React from "react";
-import NavBar from "../../components/NavBar";
+import NavBar from "../../components/navbar";
 import EditUserModal from "../../modals/edit-user";
 
 const EditUserPage = () => {

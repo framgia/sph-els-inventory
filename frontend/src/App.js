@@ -5,7 +5,7 @@ import RegisterPage from "./pages/register";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AddItemPage from "./pages/add-item";
 import DisplayUsersPage from "./pages/display-users";
-import EditUserPage from "./pages/edit-user-page";
+import EditUserPage from "./pages/edit-user";
 
 const App = () => {
   return (

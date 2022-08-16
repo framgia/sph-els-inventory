@@ -1,10 +1,12 @@
 import "../../global.css";
 import "./index.css";
-import React from "react";
-import NavBar from "../../components/NavBar";
+import React, { useState } from "react";
+import NavBar from "../../components/navbar";
 import AddUserModal from "../../modals/add-user";
 
 const RegisterPage = () => {
+  const [name, setName] = useState("");
+
   return (
     <div>
       <NavBar />
@@ -15,12 +17,18 @@ const RegisterPage = () => {
             <form className="ui form">
               <div className="field">
                 <label>Name</label>
-                <input type="text" />
+                <input
+                  type="text"
+                  placeholder="Enter Name"
+                  name="name"
+                  onChange={(e) => setName(e.target.value)}
+                  value={name}
+                />
               </div>
             </form>
             <br />
             <div>
-              <AddUserModal />
+              <AddUserModal addUser={name} />
             </div>
           </div>
         </div>
