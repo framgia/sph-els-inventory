@@ -1,8 +1,9 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
 import "./index.css";
+import { useNavigate } from "react-router-dom";
 
 const WelcomePage = () => {
+  const navigate = useNavigate();
   return (
     <div className="container">
       <h1>Home Inventory System</h1>
@@ -11,7 +12,12 @@ const WelcomePage = () => {
         <div>
           <h2>Welcome Back!</h2>
           <div>
-            <button className="btn-continue">Continue</button>
+            <button
+              className="btn-continue"
+              onClick={() => navigate("/dashboard")}
+            >
+              Continue
+            </button>
           </div>
         </div>
       </div>

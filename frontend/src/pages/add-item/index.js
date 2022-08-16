@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import FormInput from "../../components/InputText";
-import Button from "../../components/Button";
-import InputDate from "../../components/InputDate";
-import DropDown from "../../components/DropdownMenu";
+import FormInput from "../../components/input-text-field";
+import Button from "../../components/button";
+import InputDate from "../../components/inputdate";
+import DropDown from "../../components/dropdown/index.js";
+import NavBar from "../../components/navbar/index";
 import "./index.css";
 import NavBar from "../../components/NavBar";
 
@@ -36,6 +37,8 @@ const AddItemPage = () => {
   };
 
   return (
+    <>
+    <NavBar />
     <div>
       <NavBar />
       <h1>Add Item</h1>
@@ -83,6 +86,7 @@ const AddItemPage = () => {
         </form>
       </div>
     </div>
+    </>
   );
 };
 
