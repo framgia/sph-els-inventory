@@ -29,7 +29,7 @@ const EditUserPage = () => {
           </form>
           <br />
           <div>
-            <EditUserModal editUserName={name} editUserID={location.state.id} />
+            <EditUserModal editUserName={name} editUserId={location.state.id} />
           </div>
         </div>
       </div>

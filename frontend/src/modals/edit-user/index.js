@@ -3,14 +3,14 @@ import React, { useState, useEffect } from "react";
 import { Modal } from "semantic-ui-react";
 import { handle } from "../.././handler";
 
-const EditUserModal = ({ editUserName, editUserID }) => {
+const EditUserModal = ({ editUserName, editUserId }) => {
   const [name, setName] = useState(editUserName);
-  const [userId, setID] = useState(editUserID);
+  const [userId, setUserId] = useState(editUserId);
 
   useEffect(() => {
     setName(editUserName);
-    setID(editUserID);
-  }, [editUserName, editUserID]);
+    setUserId(editUserId);
+  }, [editUserName, editUserId]);
 
   const handleSubmit = (e, userId) => {
     let formField = new FormData();
@@ -34,7 +34,7 @@ const EditUserModal = ({ editUserName, editUserID }) => {
           key: "yes",
           content: "Yes",
           positive: true,
-          onClick: (event) => handleSubmit(event, editUserID),
+          onClick: (event) => handleSubmit(event, editUserId),
         },
       ]}
     />

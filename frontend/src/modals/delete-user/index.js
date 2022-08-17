@@ -5,11 +5,11 @@ import { MdDelete } from "react-icons/md";
 import { handle } from "../.././handler";
 
 const DeleteUserConfirmation = ({ deleteUserID, deleteUserName }) => {
-  const [userId, setID] = useState(deleteUserID);
+  const [userId, setUserId] = useState(deleteUserID);
   const [name, setName] = useState(deleteUserName);
 
   useEffect(() => {
-    setID(deleteUserID);
+    setUserId(deleteUserID);
     setName(deleteUserName);
   }, [deleteUserID, deleteUserName]);
 
@@ -20,7 +20,7 @@ const DeleteUserConfirmation = ({ deleteUserID, deleteUserName }) => {
       "DELETE",
       `http://localhost:8000/api/users/${userId}/`,
       formField,
-      setID
+      setUserId
     );
     window.location.reload();
   };
