@@ -16,7 +16,7 @@ function DisplayUserList() {
   }, []);
 
   const toEditUser = (id, name) => {
-    navigate("/edit-user-page", { state: { id: id, name: name } });
+    navigate("/edit-user-page", { state: { id, name } });
   };
 
   return (
@@ -41,7 +41,10 @@ function DisplayUserList() {
               <MdEdit />
             </div>
             <div className="icon">
-              <DeleteUserConfirmation deleteUserID={user.id} deleteUserName={user.name}/>
+              <DeleteUserConfirmation
+                deleteUserID={user.id}
+                deleteUserName={user.name}
+              />
             </div>
           </div>
         </div>
