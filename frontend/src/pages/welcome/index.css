@@ -1,12 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+
+h1,
+h2,
+h3 {
+  font-family: "Roboto", sans-serif;
+}
+
 h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 64px;
+  font-weight: 700;
+  font-size: 3em;
+  line-height: 38px;
 }
 
 h2 {
-  font-size: 32px;
+  color: white;
+  font-size: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,15 +27,16 @@ h3 {
   justify-content: center;
   align-items: center;
   display: flex;
-  font-size: 20px;
+  font-size: 1.2em;
+  margin-bottom: 50px;
 }
 
 .boxContainer {
-  background-color: #f2f2f2;
-  max-width: 700px;
-  width: 100%;
+  background-color: #5d62b5;
+  border-radius: 32px;
+  max-width: 480px;
   margin: auto;
-  height: 50vh;
+  height: 20rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,12 +51,16 @@ h3 {
 .btn-continue {
   font-size: 18px;
   height: 40px;
-  width: 400px;
-  background-color: black;
+  width: 300px;
+  background-color: #4b50a3;
   color: white;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  text-decoration: none;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   text-align: center;
+  transition-duration: 0.4s;
+}
+
+.btn-continue:hover {
+  background-color: #1e2266;
 }

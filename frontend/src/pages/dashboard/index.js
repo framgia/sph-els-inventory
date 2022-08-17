@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 import TodoItems from "./components/TodoItems";
-import NavBar from "../../components/NavBar/index";
+import NavBar from "../../components/NavBar";
 import { useNavigate } from "react-router-dom";
 
 const DashboardPage = () => {

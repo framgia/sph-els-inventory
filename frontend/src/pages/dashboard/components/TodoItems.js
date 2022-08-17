@@ -2,8 +2,10 @@ import React from "react";
 import { MdEdit } from "react-icons/md";
 import "../index.css";
 import DeleteConfirmation from "../../../modals/delete-item";
+import { useNavigate } from "react-router-dom";
 
 function TodoItems() {
+  const navigate = useNavigate();
   return (
     <>
       <div className="items">
@@ -16,7 +18,7 @@ function TodoItems() {
         <div className="todoActions">
           <div className="status-free">Free</div>
           <div className="icon">
-            <MdEdit />
+            <MdEdit onClick={() => navigate("/edit-item")} />
           </div>
           <div className="icon">
             <DeleteConfirmation />
@@ -33,7 +35,7 @@ function TodoItems() {
         <div className="todoActions">
           <div className="status-reserved">Reserved</div>
           <div className="icon">
-            <MdEdit />
+            <MdEdit onClick={() => navigate("/edit-item")} />
           </div>
           <div className="icon">
             <DeleteConfirmation />

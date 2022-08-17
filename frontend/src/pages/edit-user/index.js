@@ -14,7 +14,7 @@ const EditUserPage = () => {
       <NavBar />
       <div className="holder">
         <div>
-          <h2>Edit User Name</h2>
+          <h2>Edit User</h2>
           <form className="ui form">
             <div className="field">
               <label>New User Name for {location.state.name}</label>

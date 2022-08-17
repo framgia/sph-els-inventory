@@ -3,6 +3,7 @@ import "./index.css";
 import React, { useState } from "react";
 import NavBar from "../../components/NavBar";
 import AddUserModal from "../../modals/add-user";
+import FormInput from "../../components/InputText";
 
 const RegisterPage = () => {
   const [name, setName] = useState("");
@@ -10,20 +11,13 @@ const RegisterPage = () => {
   return (
     <div>
       <NavBar />
-      <div className="container">
-        <div className="boxContainer">
+      <div>
+        <div className="newContainer">
           <div>
-            <h2>Add a new user</h2>
+            <h2>Add User</h2>
             <form className="ui form">
               <div className="field">
-                <label>Name</label>
-                <input
-                  type="text"
-                  placeholder="Enter Name"
-                  name="name"
-                  onChange={(e) => setName(e.target.value)}
-                  value={name}
-                />
+                <FormInput styleName="width-lg" placeholder="Input name" />
               </div>
             </form>
             <br />

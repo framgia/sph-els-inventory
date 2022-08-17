@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import FormInput from "../../components/InputText";
-import Button from "../../components/button";
-import InputDate from "../../components/inputdate";
-import DropDown from "../../components/DropDownMenu/index";
+import Button from "../../components/Button";
+import InputDate from "../../components/InputDate";
+import DropDown from "../../components/DropDownMenu";
 import NavBar from "../../components/NavBar";
 import "./index.css";
 
@@ -37,8 +37,6 @@ const AddItemPage = () => {
 
   return (
     <>
-    <NavBar />
-    <div>
       <NavBar />
       <h1>Add Item</h1>
       <div className="addItemPage">
@@ -84,7 +82,6 @@ const AddItemPage = () => {
           </div>
         </form>
       </div>
-    </div>
     </>
   );
 };

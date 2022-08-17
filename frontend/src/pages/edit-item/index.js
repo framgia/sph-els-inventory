@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FormInput from "../../components/InputField";
+import FormInput from "../../components/InputText";
 import Button from "../../components/Button";
 import InputDate from "../../components/InputDate";
 import DropDown from "../../components/DropDownMenu";
