@@ -15,7 +15,6 @@ function DisplayUserList() {
     handle("GET", "http://localhost:8000/api/users/", formField, getUsers);
   }, []);
 
-
   const toEditUser = () => {
     navigate("/edit-user-page");
   };
@@ -41,10 +40,8 @@ function DisplayUserList() {
             >
               <MdEdit />
             </div>
-            <div
-              className="icon"
-              >
-              <DeleteUserConfirmation deleteUserID= {user.id} />
+            <div className="icon">
+              <DeleteUserConfirmation deleteUserID={user.id}/>
             </div>
           </div>
         </div>
