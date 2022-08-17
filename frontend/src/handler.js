@@ -23,5 +23,6 @@ export async function handle(method, path, formField, setter) {
       break;
     }
     default:
+      break;
   }
 }
