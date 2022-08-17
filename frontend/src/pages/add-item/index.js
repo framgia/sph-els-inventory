@@ -3,7 +3,7 @@ import FormInput from "../../components/InputText";
 import Button from "../../components/button";
 import InputDate from "../../components/inputdate";
 import DropDown from "../../components/DropDownMenu/index";
-import NavBar from "../../components/navbar";
+import NavBar from "../../components/NavBar";
 import "./index.css";
 
 const usersOptions = [

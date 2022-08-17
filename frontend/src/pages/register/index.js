@@ -1,7 +1,7 @@
 import "../../global.css";
 import "./index.css";
 import React, { useState } from "react";
-import NavBar from "../../components/navbar";
+import NavBar from "../../components/NavBar";
 import AddUserModal from "../../modals/add-user";
 
 const RegisterPage = () => {

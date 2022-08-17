@@ -3,12 +3,12 @@ import React, { useState, useEffect } from "react";
 import { Modal } from "semantic-ui-react";
 import { handle } from "../.././handler";
 
-const AddUserModal = (props) => {
-  const [user, setUser] = useState(props);
+const AddUserModal = ({ addUser }) => {
+  const [user, setUser] = useState(addUser);
 
   useEffect(() => {
-    setUser(props.addUser);
-  }, [props]);
+    setUser(addUser);
+  }, [addUser]);
 
   const handleSubmit = () => {
     let formField = new FormData();

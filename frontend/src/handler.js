@@ -13,7 +13,5 @@ export async function handle(method, path, formField, setter) {
   } else if (method === "GET") {
     const response = await axios.get(path);
     setter(response.data);
-  } else {
-    console.log("console debugging");
-  }
+  } 
 }
