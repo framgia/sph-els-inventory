@@ -15,8 +15,8 @@ function DisplayUserList() {
     handle("GET", "http://localhost:8000/api/users/", formField, getUsers);
   }, []);
 
-  const toEditUser = () => {
-    navigate("/edit-user-page");
+  const toEditUser = (id, name) => {
+    navigate("/edit-user-page", { state: { id: id, name: name } });
   };
 
   return (
@@ -35,13 +35,13 @@ function DisplayUserList() {
             <div
               className="icon"
               onClick={() => {
-                toEditUser();
+                toEditUser(user.id, user.name);
               }}
             >
               <MdEdit />
             </div>
             <div className="icon">
-              <DeleteUserConfirmation deleteUserID={user.id}/>
+              <DeleteUserConfirmation deleteUserID={user.id} deleteUserName={user.name}/>
             </div>
           </div>
         </div>
