@@ -17,7 +17,8 @@ import axios from "axios";
    axios({
     method: 'post',
     url:"http://localhost:8000/api/items/",
-    data: formField}).then((response)=>alert("SUCESS",response)).catch((response)=>alert("FAILED",response));
+    data: formField}).then((response)=>alert("SUCESS",response)).catch((response)=>
+    alert("FAILED",response));
     window.location="/dashboard"
      } 
   
