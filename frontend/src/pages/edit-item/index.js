@@ -43,7 +43,7 @@ const EditItemPage = () => {
     <div>
       <NavBar />
       <h1>Edit Item</h1>
-      <div className="editItemPage">
+      <div className="edit-item-page">
         <form onSubmit={handleSubmit}>
           <FormInput
             styleName="width-lg"

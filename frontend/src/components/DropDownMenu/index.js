@@ -9,7 +9,7 @@ const DropDown = ({ label, usersOptions, getReserveData }) => {
   ));
 
   return (
-    <div className="dropdown">
+    <div className="dropdown-menu">
       <div>
         <label>{label}</label>
       </div>

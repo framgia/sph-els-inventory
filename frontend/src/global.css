@@ -6,7 +6,7 @@ h2 {
   color: black;
 }
 
-.addButton {
+.add-button {
   font-size: 18px;
   height: 37.5px;
   width: 800px;
@@ -20,7 +20,7 @@ h2 {
   transition-duration: 0.4s;
 }
 
-.addButton:hover {
+.add-button:hover {
   background-color: #1e2266;
 }
 

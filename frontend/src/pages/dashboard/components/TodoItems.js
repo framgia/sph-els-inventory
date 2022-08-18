@@ -9,13 +9,13 @@ function TodoItems() {
   return (
     <>
       <div className="items">
-        <div className="todoDetails">
+        <div className="todo-details">
           <div className="texts">
-            <p className="todoText">Item Name</p>
+            <p className="todo-text">Item Name</p>
             <p className="time">*Item Description*</p>
           </div>
         </div>
-        <div className="todoActions">
+        <div className="todo-actions">
           <div className="status-free">Free</div>
           <div className="icon">
             <MdEdit onClick={() => navigate("/edit-item")} />
@@ -26,13 +26,13 @@ function TodoItems() {
         </div>
       </div>
       <div className="items">
-        <div className="todoDetails">
+        <div className="todo-details">
           <div className="texts">
-            <p className="todoText">Item Name</p>
+            <p className="todo-text">Item Name</p>
             <p className="time">*Item Description*</p>
           </div>
         </div>
-        <div className="todoActions">
+        <div className="todo-actions">
           <div className="status-reserved">Reserved</div>
           <div className="icon">
             <MdEdit onClick={() => navigate("/edit-item")} />

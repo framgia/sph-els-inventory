@@ -17,7 +17,7 @@ const EditUserPage = () => {
           <h2>Edit User</h2>
           <form className="ui form">
             <div className="field">
-              <label>New User Name for {location.state.name}</label>
+              <label>Edit name for {location.state.name}</label>
               <input
                 type="text"
                 placeholder="Enter New Name"

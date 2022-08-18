@@ -12,7 +12,7 @@ const DashboardPage = () => {
       <NavBar />
       <div className="main-container">
         <h1 className="page-title">Inventory List</h1>
-        <div className="addItem-container">
+        <div className="add-item-container">
           <div className="app-header">
             <button
               className="button-primary"

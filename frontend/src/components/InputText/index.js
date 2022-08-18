@@ -4,7 +4,7 @@ import "./index.css";
 
 const FormInput = ({ name, onChange, text, placeholder, styleName }) => {
   return (
-    <div className="formInput">
+    <div className="form-input">
       <label>{text}</label>
       <input
         className={styleName}

@@ -39,7 +39,7 @@ const AddItemPage = () => {
     <>
       <NavBar />
       <h1>Add Item</h1>
-      <div className="addItemPage">
+      <div className="add-item-page">
         <form onSubmit={handleSubmit}>
           <FormInput
             styleName="width-lg"

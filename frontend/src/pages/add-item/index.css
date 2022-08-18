@@ -1,10 +1,10 @@
-.addItemPage {
+.add-item-page {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.formInput {
+.form-input {
   display: inline;
   margin-right: auto;
 }

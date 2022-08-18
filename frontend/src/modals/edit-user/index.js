@@ -25,7 +25,7 @@ const EditUserModal = ({ editUserName, editUserId }) => {
 
   return (
     <Modal
-      trigger={<button className="addButton">Submit</button>}
+      trigger={<button className="add-button">Submit</button>}
       header="Edit User"
       content="Confirm Changes?"
       actions={[
