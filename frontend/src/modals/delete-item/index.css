@@ -1,0 +1,11 @@
+.ui.modal > .content {
+    font-size: 25px;
+  }
+  
+  .ui.modal {
+    width: 60%;
+  }
+  
+  .ui.button {
+    font-size: 14px;
+  }

@@ -1,7 +1,7 @@
 import "../../global.css";
 import "./index.css";
 import React, { useState } from "react";
-import NavBar from "../../components/NavBar";
+import NavBar from "../../components/navbar";
 import EditUserModal from "../../modals/edit-user";
 import { useLocation } from "react-router-dom";
 

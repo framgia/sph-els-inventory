@@ -1,3 +1,4 @@
+from statistics import mode
 from django.db import models
 
 # Create your models here.
@@ -15,17 +16,10 @@ class Reservation(models.Model):
 
   def __str__(self):
     return str(self.user)
-
-class Room(models.Model):
-  name = models.CharField(max_length=50)
-
-  def __str__(self):
-    return self.name
-
+    
 class Item(models.Model):
   name = models.CharField(max_length=50)
   reservation = models.ForeignKey(Reservation, on_delete=models.CASCADE, default=None, null=True, blank=True)
-  room = models.ForeignKey(Room, on_delete=models.CASCADE, default=None)
-
+  room = models.CharField(max_length=50)
   def __str__(self):
     return self.name
