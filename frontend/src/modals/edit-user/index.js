@@ -2,17 +2,32 @@ import "../../global.css";
 import React, { useState, useEffect } from "react";
 import { Modal } from "semantic-ui-react";
 import { handle } from "../.././handler";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const EditUserModal = ({ editUserName, editUserId }) => {
+  const navigate = useNavigate();
+  const [userList, setUserList] = useState([]);
   const [name, setName] = useState(editUserName);
   const [userId, setUserId] = useState(editUserId);
 
   useEffect(() => {
+    axios.get("http://localhost:8000/api/users/").then((response) => {
+      const fetchedNames = response.data.map((res) => res.name);
+      setUserList(fetchedNames);
+    });
+    
     setName(editUserName);
     setUserId(editUserId);
   }, [editUserName, editUserId]);
 
   const handleSubmit = (e, userId) => {
+    if (userList.includes(editUserName.trim())) {
+      alert(`${editUserName} is already taken, Please enter any other name.`);
+      return;
+    }
+
+    alert(`Successfully edited to ${editUserName}`);
     let formField = new FormData();
     formField.append("name", name);
     handle(
@@ -21,6 +36,8 @@ const EditUserModal = ({ editUserName, editUserId }) => {
       formField,
       setName
     );
+
+    navigate("/display-users");
   };
 
   return (
