@@ -15,7 +15,7 @@ const EditItemModal = ({editItem,editItemId,editRoom}) => {
         setItemId(editItemId);
       }, [editItem, editItemId,editRoom]);
 
-      const handleSubmit = (e,itemId)=>{
+      const handleSubmit = (e, itemId)=>{
             let formField = new FormData();
             formField.append("name",name);
             formField.append("room",room);
@@ -25,9 +25,7 @@ const EditItemModal = ({editItem,editItemId,editRoom}) => {
                 formField,
                 setName
             );  
-            window.location ="/dashboard"
-              
-              
+            window.location ="/dashboard"        
       }
     return (
     <Modal
