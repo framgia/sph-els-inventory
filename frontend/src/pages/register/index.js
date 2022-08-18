@@ -13,14 +13,13 @@ const RegisterPage = () => {
       <div>
         <div className="add-user-container">
           <div>
-            <h2>Add User</h2>
-            <form className="ui form">
+            <form className="form-add-user">
+              <h1 className="page-title">Add User</h1>
               <div className="field">
                 <label>Name</label>
                 <input
                   type="text"
                   placeholder="Enter Name"
-                  name="name"
                   onChange={(e) => setName(e.target.value)}
                   value={name}
                 />

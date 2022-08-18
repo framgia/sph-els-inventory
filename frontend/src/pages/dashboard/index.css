@@ -13,11 +13,12 @@ body {
 }
 .main-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 750px;
   margin: auto;
   background-color: #dadada;
   border-radius: 8px;
   padding: 4rem;
+  margin-top: 50px;
 }
 
 .page-title {

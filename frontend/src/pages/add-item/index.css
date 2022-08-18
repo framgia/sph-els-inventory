@@ -1,18 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+
 .add-item-page {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .form-input {
   display: inline;
   margin-right: auto;
-}
-
-h1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .inline-form {
@@ -22,4 +19,26 @@ h1 {
 
 .pos-btn {
   margin-top: 10px;
+}
+
+.form-add-item {
+  background-color: #dadada;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.add-item-tittle {
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  background-color: #dadada;
+  justify-content: left;
+  border-radius: 20px;
+}
+
+input {
+  margin-bottom: 5px;
+  margin-top: 0px;
+  width: 100%;
+  padding: 20px;
 }
