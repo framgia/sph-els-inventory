@@ -10,10 +10,10 @@ const RegisterPage = () => {
   return (
     <div>
       <NavBar />
-      <div className="container">
-        <div className="boxContainer">
+      <div>
+        <div className="add-user-container">
           <div>
-            <h2>Add a new user</h2>
+            <h2>Add User</h2>
             <form className="ui form">
               <div className="field">
                 <label>Name</label>

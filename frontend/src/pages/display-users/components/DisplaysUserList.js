@@ -23,15 +23,15 @@ function DisplayUserList() {
     <>
       {users.map((user, index) => (
         <div className="items" key={index}>
-          <div className="todoDetails">
+          <div className="todo-details">
             <div className="texts">
-              <p className="todoText">
+              <p className="todo-text">
                 <ImUser className="style-icon" />
                 {user.name}
               </p>
             </div>
           </div>
-          <div className="todoActions">
+          <div className="todo-actions">
             <div
               className="icon"
               onClick={() => {

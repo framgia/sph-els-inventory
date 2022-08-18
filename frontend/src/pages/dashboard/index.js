@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 import TodoItems from "./components/TodoItems";
-import NavBar from "../../components/NavBar/index";
+import NavBar from "../../components/NavBar";
 import { useNavigate } from "react-router-dom";
 
 const DashboardPage = () => {
@@ -12,7 +12,7 @@ const DashboardPage = () => {
       <NavBar />
       <div className="main-container">
         <h1 className="page-title">Inventory List</h1>
-        <div className="addItem-container">
+        <div className="add-item-container">
           <div className="app-header">
             <button
               className="button-primary"

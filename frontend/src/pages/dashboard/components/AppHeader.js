@@ -3,7 +3,7 @@ import "../index.css";
 
 function AppHeader() {
   return (
-    <div className="app-Header">
+    <div className="app-header">
       <button className="button-primary">Add Item</button>
       <select id="status">
         <option value="all">All</option>

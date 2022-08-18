@@ -5,10 +5,10 @@ import { useNavigate } from "react-router-dom";
 const WelcomePage = () => {
   const navigate = useNavigate();
   return (
-    <div className="container">
+    <div className="welcome-container">
       <h1>Home Inventory System</h1>
       <h3>A system where you can Store, Find and Manage things easily</h3>
-      <div className="boxContainer">
+      <div className="box-container">
         <div>
           <h2>Welcome Back!</h2>
           <div>

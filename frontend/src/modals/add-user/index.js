@@ -17,7 +17,7 @@ const AddUserModal = ({ addUser }) => {
   };
   return (
     <Modal
-      trigger={<button className="addButton">Add User</button>}
+      trigger={<button className="add-button">Add</button>}
       header="Add User"
       content="Are you sure you want to add this user?"
       actions={[
