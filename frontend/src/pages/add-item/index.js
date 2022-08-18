@@ -1,87 +1,76 @@
 import React, { useState } from "react";
-import FormInput from "../../components/InputText";
-import Button from "../../components/Button";
-import InputDate from "../../components/InputDate";
-import DropDown from "../../components/DropDownMenu";
 import NavBar from "../../components/NavBar";
+import { Modal } from "semantic-ui-react";
 import "./index.css";
+import axios from "axios";
 
-const usersOptions = [
-  {
-    id: 1,
-    user: "user-1",
-  },
-  {
-    id: 2,
-    user: "user-2",
-  },
-];
 
-const AddItemPage = () => {
-  const [itemName, setItemName] = useState("");
-  const [room, setRoom] = useState("");
-  const [reserve, setReserve] = useState("");
-  const [fromDateInput, setFromDateInput] = useState("");
-  const [toDateInput, setToDateInput] = useState("");
+  const AddItemPage = () => {
+  const [name,setItem] = useState("")
+  const [room,setRoom] = useState("")
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(`
-    Item Name: ${itemName}
-    Room: ${room}
-    Reserved User: ${reserve}
-    From: ${fromDateInput}
-    To: ${toDateInput}
-    `);
-  };
+  const addItem = async () =>{
+    let formField = new FormData();
+    formField.append("name",name)
+    formField.append("room",room)
+   
+   axios({
+    method: 'post',
+    url:"http://localhost:8000/api/items/",
+    data: formField}).then((response)=>alert("SUCESS",response)).catch((response)=>
+    alert("FAILED",response));
+    window.location="/dashboard"
+     } 
+  
 
   return (
     <>
-      <NavBar />
-      <h1>Add Item</h1>
-      <div className="add-item-page">
-        <form onSubmit={handleSubmit}>
-          <FormInput
-            styleName="width-lg"
-            onChange={(e) => setItemName(e.target.value)}
-            placeholder="Item Name"
-            text="Item Name"
-          />
-
-          <FormInput
-            styleName="width-lg"
-            onChange={(e) => setRoom(e.target.value)}
-            placeholder="Room"
-            text="Room"
-          />
-
-          <DropDown
-            label="Reserve Item For"
-            usersOptions={usersOptions}
-            selected={reserve}
-            getReserveData={(reservedData) => setReserve(reservedData)}
-          />
-
-          <div className="inline-form">
-            <InputDate
-              styleName="width-lg-input-from-date"
-              text="From:"
-              getDateData={(fromDateData) => setFromDateInput(fromDateData)}
-            />
-            <InputDate
-              styleName="width-lg-input-to-date"
-              getDateData={(toDateData) => setToDateInput(toDateData)}
-              text="To:"
-            />
+ <NavBar/>
+    <div>
+      
+       <div className="add-user-container">
+          <div>
+          <h1>Add Item</h1>
+            <form className="ui form">
+              <div className="field">
+                <label>Item Name</label>
+                <input
+                  type="text"
+                  placeholder="Enter Name"
+                  name="name"
+                  value={name}
+                  onChange = {(e)=>setItem(e.target.value)}
+                  
+                />
+                <label>Where it is located</label>
+                 <input
+                  type="text"
+                  placeholder="Enter Room"
+                  name="room"
+                  value={room}
+                  onChange = {(e)=>setRoom(e.target.value)}
+                  /> 
+              </div>
+              </form>
+            <br />
+           
           </div>
-
-          <div className="pos-btn">
-            <Button buttonStyle="btn--default--color" buttonSize="btn--small">
-              Submit
-            </Button>
-          </div>
-        </form>
-      </div>
+         
+         <div>
+             <Modal
+             trigger={<button className="add-button">Add Item</button>}
+             header="Add Item"
+             content="Are you sure you want to add this Item?"
+             actions={[
+               "Cancel",
+               { key: "yes", content: "Yes", positive: true, onClick: addItem },
+             ]}
+             />
+       </div>
+        </div>
+       
+    
+    </div>
     </>
   );
 };

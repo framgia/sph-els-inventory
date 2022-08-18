@@ -21,7 +21,7 @@ from api import views
 router = routers.DefaultRouter()
 router.register(r'users', views.UserView, 'user')
 router.register(r'reservations', views.ReservationView, 'reservation')
-router.register(r'rooms', views.RoomView, 'room')
+
 router.register(r'items', views.ItemView, 'item')
 
 urlpatterns = [
