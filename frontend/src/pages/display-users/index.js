@@ -1,6 +1,6 @@
 import React from "react";
 import "../dashboard/index.css";
-import NavBar from "../../components/navbar";
+import NavBar from "../../components/NavBar";
 import DisplayUserList from "./components/DisplaysUserList";
 
 const DisplayUsersPage = () => {

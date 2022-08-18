@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import NavBar from "../../components/navbar";
+import NavBar from "../../components/NavBar";
 import "./index.css";
 import EditItemModal from "../../modals/edit-item";
 import { useLocation } from "react-router-dom";

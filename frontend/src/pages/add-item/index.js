@@ -1,28 +1,26 @@
-
-import { createBrowserHistory } from "history";
 import React, { useState } from "react";
-import NavBar from "../../components/navbar";
+import NavBar from "../../components/NavBar";
 import { Modal } from "semantic-ui-react";
 import "./index.css";
 import axios from "axios";
 
 
-
-const AddItemPage = () => {
+  const AddItemPage = () => {
   const [name,setItem] = useState("")
   const [room,setRoom] = useState("")
-  const history = createBrowserHistory()
- 
+
   const addItem = async () =>{
     let formField = new FormData();
     formField.append("name",name)
     formField.append("room",room)
-
+   
    axios({
     method: 'post',
     url:"http://localhost:8000/api/items/",
-    data: formField}).then((response)=>console.log(response.data));
-    }
+    data: formField}).then((response)=>alert("SUCESS",response)).catch((response)=>alert("FAILED",response));
+    window.location="/dashboard"
+     } 
+  
 
   return (
     <>
@@ -54,7 +52,10 @@ const AddItemPage = () => {
               </div>
               </form>
             <br />
-            <div>
+           
+          </div>
+         
+         <div>
              <Modal
              trigger={<button className="add-button">Add Item</button>}
              header="Add Item"
@@ -65,8 +66,8 @@ const AddItemPage = () => {
              ]}
              />
        </div>
-          </div>
         </div>
+       
     
     </div>
     </>

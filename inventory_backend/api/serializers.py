@@ -18,13 +18,9 @@ class ReservationSerializer(serializers.ModelSerializer):
   class Meta:
     model = Reservation
     fields = ('id','user', 'reserved_date_from', 'reserved_date_to') # '__all__'
-
-
-
+    
 class ItemSerializer(serializers.ModelSerializer):
- 
- 
-  class Meta:
+   class Meta:
      model = Item
      fields = ('id','name', 'reservation', 'room')
     
