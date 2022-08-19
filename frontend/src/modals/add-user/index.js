@@ -25,12 +25,17 @@ const AddUserModal = ({ addUser }) => {
       return;
     }
 
-    alert(`Successfully added ${addUser}`)
+    if (!addUser.trim()) {
+      alert(`Please enter a user`);
+      return;
+    }
+
+    alert(`Successfully added ${addUser}`);
     let formField = new FormData();
     formField.append("name", user);
     handle("POST", "http://localhost:8000/api/users/", formField, setUser);
-    
-    navigate("/display-users")
+
+    navigate("/display-users");
   };
   return (
     <Modal

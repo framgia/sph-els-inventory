@@ -4,34 +4,33 @@ import { Modal } from "semantic-ui-react";
 import "./index.css";
 import axios from "axios";
 
+const AddItemPage = () => {
+  const [name, setItem] = useState("");
+  const [room, setRoom] = useState("");
 
-  const AddItemPage = () => {
-  const [name,setItem] = useState("")
-  const [room,setRoom] = useState("")
-
-  const addItem = async () =>{
+  const addItem = async () => {
     let formField = new FormData();
-    formField.append("name",name)
-    formField.append("room",room)
-   
-   axios({
-    method: 'post',
-    url:"http://localhost:8000/api/items/",
-    data: formField}).then((response)=>alert("SUCESS",response)).catch((response)=>
-    alert("FAILED",response));
-    window.location="/dashboard"
-     } 
-  
+    formField.append("name", name);
+    formField.append("room", room);
+
+    axios({
+      method: "post",
+      url: "http://localhost:8000/api/items/",
+      data: formField,
+    })
+      .then((response) => alert("SUCESS", response))
+      .catch((response) => alert("FAILED", response));
+    window.location = "/dashboard";
+  };
 
   return (
     <>
- <NavBar/>
-    <div>
-      
-       <div className="add-user-container">
+      <NavBar />
+      <div>
+        <div className="add-user-container">
           <div>
-          <h1>Add Item</h1>
-            <form className="ui form">
+            <form className="form-add-item">
+              <h1 className="add-item-tittle">Add Item</h1>
               <div className="field">
                 <label>Item Name</label>
                 <input
@@ -39,38 +38,39 @@ import axios from "axios";
                   placeholder="Enter Name"
                   name="name"
                   value={name}
-                  onChange = {(e)=>setItem(e.target.value)}
-                  
+                  onChange={(e) => setItem(e.target.value)}
                 />
                 <label>Where it is located</label>
-                 <input
+                <input
                   type="text"
                   placeholder="Enter Room"
                   name="room"
                   value={room}
-                  onChange = {(e)=>setRoom(e.target.value)}
-                  /> 
+                  onChange={(e) => setRoom(e.target.value)}
+                />
               </div>
-              </form>
+            </form>
             <br />
-           
           </div>
-         
-         <div>
-             <Modal
-             trigger={<button className="add-button">Add Item</button>}
-             header="Add Item"
-             content="Are you sure you want to add this Item?"
-             actions={[
-               "Cancel",
-               { key: "yes", content: "Yes", positive: true, onClick: addItem },
-             ]}
-             />
-       </div>
+
+          <div>
+            <Modal
+              trigger={<button className="add-button">Add Item</button>}
+              header="Add Item"
+              content="Are you sure you want to add this Item?"
+              actions={[
+                "Cancel",
+                {
+                  key: "yes",
+                  content: "Yes",
+                  positive: true,
+                  onClick: addItem,
+                },
+              ]}
+            />
+          </div>
         </div>
-       
-    
-    </div>
+      </div>
     </>
   );
 };

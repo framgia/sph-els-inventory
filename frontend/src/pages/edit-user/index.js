@@ -12,24 +12,31 @@ const EditUserPage = () => {
   return (
     <div>
       <NavBar />
-      <div className="holder">
-        <div>
-          <h2>Edit User</h2>
-          <form className="ui form">
-            <div className="field">
-              <label>Edit name for {location.state.name}</label>
-              <input
-                type="text"
-                placeholder="Enter New Name"
-                name="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+      <div>
+        <div className="edit-user-container">
+          <div>
+            <form className="form-edit-user">
+              <h1 className="page-title">Edit User</h1>
+              <div className="field">
+                <label className="label-name">
+                  Edit name for {location.state.name}
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter New Name"
+                  name="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </div>
+            </form>
+            <br />
+            <div>
+              <EditUserModal
+                editUserName={name}
+                editUserId={location.state.id}
               />
             </div>
-          </form>
-          <br />
-          <div>
-            <EditUserModal editUserName={name} editUserId={location.state.id} />
           </div>
         </div>
       </div>

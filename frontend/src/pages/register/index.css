@@ -10,5 +10,31 @@
   margin: auto;
   background-color: #dadada;
   border-radius: 8px;
-  padding: 4rem;
+  padding: 0px 4rem 4rem 4rem;
+  margin-top: 50px;
+}
+
+.add-user {
+  display: inline-block;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: left;
+  color: #1c1c1d;
+}
+
+.ui.form .field > label {
+  font-size: 15px;
+}
+
+.ui.form .field:last-child,
+.ui.form .fields:last-child .field {
+  font-size: 15px;
+}
+
+.form-add-user {
+  background-color: #dadada;
+  padding: 30px;
+  border-radius: 20px;
 }

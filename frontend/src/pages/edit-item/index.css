@@ -23,3 +23,19 @@ h1 {
 .pos-btn {
   margin-top: 10px;
 }
+
+.form-edit-item {
+  background-color: #dadada;
+  padding: 30px;
+  border-radius: 20px;
+  padding: 0px;
+}
+
+.edit-item-tittle {
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  background-color: #dadada;
+  justify-content: left;
+  border-radius: 20px;
+}
