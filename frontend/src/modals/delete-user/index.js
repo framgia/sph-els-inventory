@@ -11,7 +11,7 @@ const DeleteUserConfirmation = ({ deleteUserID, deleteUserName }) => {
   useEffect(() => {
     setUserId(deleteUserID);
     setName(deleteUserName);
-  }, [deleteUserID, deleteUserName]);
+  }, [deleteUserID, deleteUserName, userId]);
 
   const handleDelete = (event, userId) => {
     const formField = new FormData();

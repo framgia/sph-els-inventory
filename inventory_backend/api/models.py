@@ -10,16 +10,16 @@ class User(models.Model):
     return self.name
 
 class Reservation(models.Model):
-  user = models.ForeignKey(User, on_delete=models.CASCADE, default=None)
-  reserved_date_from = models.DateField()
-  reserved_date_to = models.DateField()
+  user_id = models.CharField(max_length=50, default='1')
+  item_id = models.CharField(max_length=50, default='1')
+  reserved_date_from = models.CharField(max_length=50)
+  reserved_date_to = models.CharField(max_length=50)
 
   def __str__(self):
     return str(self.user)
     
 class Item(models.Model):
   name = models.CharField(max_length=50)
-  reservation = models.ForeignKey(Reservation, on_delete=models.CASCADE, default=None, null=True, blank=True)
   room = models.CharField(max_length=50)
   def __str__(self):
     return self.name
