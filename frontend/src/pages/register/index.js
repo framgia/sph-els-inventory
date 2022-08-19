@@ -18,9 +18,9 @@ const RegisterPage = () => {
               <div className="field">
                 <label>Name</label>
                 <input
+                  required
                   type="text"
-                  placeholder="Enter Name"
-                  name="name"
+                  placeholder="Enter Names"
                   onChange={(e) => setName(e.target.value)}
                   value={name}
                 />

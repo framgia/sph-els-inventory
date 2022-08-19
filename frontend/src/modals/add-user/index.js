@@ -25,6 +25,11 @@ const AddUserModal = ({ addUser }) => {
       return;
     }
 
+    if (addUser.trim() === "") {
+      alert(`Please enter a user`);
+      return;
+    }
+
     alert(`Successfully added ${addUser}`);
     let formField = new FormData();
     formField.append("name", user);

@@ -5,7 +5,6 @@
 }
 
 .right .item:not(:nth-child(0)):hover {
-  text-decoration: underline;
   color: #5d62b5;
   cursor: pointer;
   background: #bec0e1;
