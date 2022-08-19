@@ -84,6 +84,7 @@ function TodoItems() {
           <div className="todo-actions">
             <div
               className="status-free"
+              style={{color:'white'}}
               onClick={() => {
                 toReservation(item.id, item.name);
               }}
