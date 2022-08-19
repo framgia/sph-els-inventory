@@ -18,7 +18,7 @@ const EditItemPage = () => {
           <form className="form-edit-item">
             <h1 className="edit-item-tittle">Edit Item</h1>
             <div className="field">
-              <label>New Item Name for {location.state.name}</label>
+              <label>New item name for {location.state.name}</label>
               <input
                 type="text"
                 placeholder="Enter New Name"
@@ -26,6 +26,7 @@ const EditItemPage = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
+              <label>New room name for {location.state.name}</label>
               <input
                 type="text"
                 placeholder="Enter Room"

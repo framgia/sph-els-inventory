@@ -16,7 +16,7 @@ const EditUserModal = ({ editUserName, editUserId }) => {
       const fetchedNames = response.data.map((res) => res.name);
       setUserList(fetchedNames);
     });
-    
+
     setName(editUserName);
     setUserId(editUserId);
   }, [editUserName, editUserId]);
@@ -24,6 +24,10 @@ const EditUserModal = ({ editUserName, editUserId }) => {
   const handleSubmit = (e, userId) => {
     if (userList.includes(editUserName.trim())) {
       alert(`${editUserName} is already taken, Please enter any other name.`);
+      return;
+    }
+    if (!editUserName.trim()) {
+      alert(`Please input all fields.`);
       return;
     }
 
@@ -37,7 +41,7 @@ const EditUserModal = ({ editUserName, editUserId }) => {
       setName
     );
 
-    navigate("/display-users");
+    window.location = "/display-users";
   };
 
   return (
