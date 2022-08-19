@@ -35,7 +35,7 @@ const AddUserModal = ({ addUser }) => {
     formField.append("name", user);
     handle("POST", "http://localhost:8000/api/users/", formField, setUser);
 
-    navigate("/display-users");
+    window.location = "/display-users";
   };
   return (
     <Modal

@@ -21,7 +21,6 @@ function TodoItems() {
       getReservations
     );
     handle("GET", "http://localhost:8000/api/users/", formField, getUsers);
-
   }, []);
 
   const toEditItem = (id, name, room) => {
@@ -49,8 +48,8 @@ function TodoItems() {
         <div className="items" key={index}>
           <div className="todo-details">
             <div className="texts">
-              <p className="todo-text"> {item.name}</p>
-              <p className="todo-text"> {item.room}</p>
+              <p className="todo-text">Item: {item.name}</p>
+              <p className="todo-text">Room: {item.room}</p>
               <p className="text"> Reservations:</p>
               {reservations.map((reservation, index) => {
                 if (reservation.item_id === item.id.toString()) {
@@ -61,7 +60,6 @@ function TodoItems() {
                         onClick={(event) => handleDelete(event, reservation.id)}
                       >
                         {users.map((user, index) => {
-                          
                           if (reservation.user_id === user.id.toString()) {
                             return (
                               <p className="time" key={index}>
@@ -84,7 +82,7 @@ function TodoItems() {
           <div className="todo-actions">
             <div
               className="status-free"
-              style={{color:'white'}}
+              style={{ color: "white" }}
               onClick={() => {
                 toReservation(item.id, item.name);
               }}

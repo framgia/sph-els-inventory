@@ -2,13 +2,12 @@ import "../../global.css";
 import React, { useState, useEffect } from "react";
 import { Modal } from "semantic-ui-react";
 import { handle } from "../.././handler";
-import { createBrowserHistory } from "history";
 
 const EditItemModal = ({ editItem, editItemId, editRoom }) => {
   const [name, setName] = useState(editItem);
   const [room, setRoom] = useState(editRoom);
   const [itemId, setItemId] = useState(editItemId);
-  const history = createBrowserHistory();
+
   useEffect(() => {
     setName(editItem);
     setRoom(editRoom);
@@ -16,6 +15,14 @@ const EditItemModal = ({ editItem, editItemId, editRoom }) => {
   }, [editItem, editItemId, editRoom]);
 
   const handleSubmit = (e, itemId) => {
+    if (!editItem.trim()) {
+      alert(`Please input all fields.`);
+      return;
+    }
+    if (!editRoom.trim()) {
+      alert(`Please input all fields.`);
+      return;
+    }
     let formField = new FormData();
     formField.append("name", name);
     formField.append("room", room);

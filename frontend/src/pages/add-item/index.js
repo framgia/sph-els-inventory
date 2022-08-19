@@ -18,8 +18,13 @@ const AddItemPage = () => {
       url: "http://localhost:8000/api/items/",
       data: formField,
     })
-      .then((response) => alert("SUCESS", response))
-      .catch((response) => alert("FAILED", response));
+      .then((response) => alert("The item was added successfully.", response))
+      .catch((response) =>
+        alert(
+          "The item was not added. All input fields are required.",
+          response
+        )
+      );
     window.location = "/dashboard";
   };
 
@@ -30,7 +35,7 @@ const AddItemPage = () => {
         <div className="add-user-container">
           <div>
             <form className="form-add-item">
-              <h1 className="add-item-tittle">Add Item</h1>
+              <h1 className="add-item-title">Add Item</h1>
               <div className="field">
                 <label>Item Name</label>
                 <input

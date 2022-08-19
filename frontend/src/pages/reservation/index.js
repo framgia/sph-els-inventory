@@ -4,7 +4,7 @@ import { Modal } from "semantic-ui-react";
 import "./index.css";
 import { useLocation } from "react-router-dom";
 import { handle } from "../.././handler";
-import InputDate from "../../components/inputdate";
+import InputDate from "../../components/InputDate";
 import axios from "axios";
 
 const ReservationPage = () => {
@@ -18,7 +18,6 @@ const ReservationPage = () => {
     let formField = new FormData();
     formField.append("user", userName);
     handle("GET", "http://localhost:8000/api/users/", formField, setOptionList);
- 
   }, [userName, toDateInput, fromDateInput]);
 
   const addReservation = async () => {
