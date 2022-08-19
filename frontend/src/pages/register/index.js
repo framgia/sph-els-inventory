@@ -20,6 +20,7 @@ const RegisterPage = () => {
                 <input
                   type="text"
                   placeholder="Enter Name"
+                  name="name"
                   onChange={(e) => setName(e.target.value)}
                   value={name}
                 />
