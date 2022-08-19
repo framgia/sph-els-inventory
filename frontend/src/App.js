@@ -7,6 +7,7 @@ import AddItemPage from "./pages/add-item";
 import DisplayUsersPage from "./pages/display-users";
 import EditUserPage from "./pages/edit-user";
 import EditItemPage from "./pages/edit-item";
+import ReservationPage from "./pages/reservation";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/edit-item-page" element={<EditItemPage />} />
         <Route path="/edit-user-page" element={<EditUserPage />} />
         <Route path="/display-users" element={<DisplayUsersPage />} />
+        <Route path="/reservation-page" element={<ReservationPage />} />
       </Routes>
     </Router>
   );

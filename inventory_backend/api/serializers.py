@@ -9,18 +9,13 @@ class UserSerializer(serializers.ModelSerializer):
     fields = (['id','name'])
 
 class ReservationSerializer(serializers.ModelSerializer):
-  user= serializers.SlugRelatedField(
-    
-    slug_field='name',
-    queryset= User.objects.all()
 
-  )
   class Meta:
     model = Reservation
-    fields = ('id','user', 'reserved_date_from', 'reserved_date_to') # '__all__'
+    fields = ('id','user_id', 'item_id', 'reserved_date_from', 'reserved_date_to') 
     
 class ItemSerializer(serializers.ModelSerializer):
    class Meta:
      model = Item
-     fields = ('id','name', 'reservation', 'room')
+     fields = ('id','name','room')
     

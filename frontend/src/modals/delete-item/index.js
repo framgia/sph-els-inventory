@@ -4,16 +4,16 @@ import { Modal } from "semantic-ui-react";
 import { MdDelete } from "react-icons/md";
 import { handle } from "../.././handler";
 
-const DeleteItemConfirmation = ({ deleteItemId, deleteName,deleteRoom }) => {
+const DeleteItemConfirmation = ({ deleteItemId, deleteName, deleteRoom }) => {
   const [itemId, setItemId] = useState(deleteItemId);
   const [name, setName] = useState(deleteName);
-  const [room,setRoom] = useState (deleteRoom)
+  const [room, setRoom] = useState(deleteRoom);
 
   useEffect(() => {
     setItemId(deleteItemId);
     setName(deleteName);
-    setRoom(deleteRoom)
-  }, [deleteItemId, deleteName,deleteRoom]);
+    setRoom(deleteRoom);
+  }, [deleteItemId, deleteName, deleteRoom]);
 
   const handleDelete = (event, ItemId) => {
     const formField = new FormData();
@@ -32,7 +32,7 @@ const DeleteItemConfirmation = ({ deleteItemId, deleteName,deleteRoom }) => {
     <Modal
       trigger={<MdDelete />}
       header="Delete Item"
-      content={"Are you sure you want to delete " + deleteName+ " ?"}
+      content={"Are you sure you want to delete " + deleteName + " ?"}
       actions={[
         "Cancel",
         {
