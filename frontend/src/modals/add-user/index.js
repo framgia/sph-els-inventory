@@ -25,7 +25,7 @@ const AddUserModal = ({ addUser }) => {
       return;
     }
 
-    if (addUser.trim() === "") {
+    if (!addUser.trim()) {
       alert(`Please enter a user`);
       return;
     }
